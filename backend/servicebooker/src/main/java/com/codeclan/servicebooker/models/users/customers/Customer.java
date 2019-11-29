@@ -14,11 +14,12 @@ import java.util.List;
 public class Customer extends User {
 
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "customer")
     private List<Job> jobs;
+
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = "customers")
+    @JsonIgnoreProperties(value = "customer")
     private List<Review> reviews;
 
     public Customer(String name, String address, String email, String tellNo, String location){

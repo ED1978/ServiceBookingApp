@@ -9,16 +9,22 @@ public abstract class User{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "address")
     private String address;
+
     @Column(name = "email")
     private String email;
+
     @Column(name = "tell_no")
     private String tellNo;
+
     @Column(name = "location")
     private String location;
+
     @Column(name = "rating")
     private Double rating;
 
