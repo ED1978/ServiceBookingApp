@@ -18,7 +18,9 @@ class ServicebookerApplicationTests {
 
 	@Test
 	void createFreelancer() {
-		Freelancer freelancer = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden");
-		freelancerRepository.save(freelancer);
+		Freelancer freelancer1 = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden");
+		Freelancer freelancer2 = new Freelancer("John's Joiners", "Spey Road", "John@JsJNRS.co.uk", "07455122399", "Bearsden", "Building");
+		freelancerRepository.save(freelancer1);
+		freelancerRepository.save(freelancer2);
 	}
 }

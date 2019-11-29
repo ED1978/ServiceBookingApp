@@ -14,6 +14,7 @@ import java.util.List;
 public class Customer extends User {
 
 
+
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "customer")
     private List<Job> jobs;

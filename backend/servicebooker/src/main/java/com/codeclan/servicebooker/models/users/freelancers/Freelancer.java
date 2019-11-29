@@ -14,6 +14,8 @@ import java.util.List;
 public class Freelancer extends User {
 
 
+
+
     @Column(name = "category")
     private String category;
 
