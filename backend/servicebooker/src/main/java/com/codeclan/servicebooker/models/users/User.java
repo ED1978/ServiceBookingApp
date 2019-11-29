@@ -1,19 +1,27 @@
 package com.codeclan.servicebooker.models.users;
 
-import com.codeclan.servicebooker.models.reviews.Review;
+import javax.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
+@MappedSuperclass
+public abstract class User{
 
-public abstract class User {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "address")
     private String address;
+    @Column(name = "email")
     private String email;
+    @Column(name = "tell_no")
     private String tellNo;
+    @Column(name = "location")
     private String location;
+    @Column(name = "rating")
     private Double rating;
-    private List<Review> reviews;
+
 
     public User(String name, String address, String email, String tellNo, String location){
         this.name = name;
@@ -22,7 +30,6 @@ public abstract class User {
         this.tellNo = tellNo;
         this.location = location;
         this.rating = 0.00;
-        this.reviews = new ArrayList<Review>();
     }
 
     public User(){
@@ -77,15 +84,5 @@ public abstract class User {
         this.rating = rating;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
-    }
 
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
-    public void addReview(Review review){
-        this.reviews.add(review);
-    }
 }

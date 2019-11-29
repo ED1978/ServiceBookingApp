@@ -2,15 +2,42 @@ package com.codeclan.servicebooker.models.jobs;
 
 import com.codeclan.servicebooker.models.users.customers.Customer;
 import com.codeclan.servicebooker.models.users.freelancers.Freelancer;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "jobs")
 public class Job {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "location")
     private String location;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "price")
     private Double price;
+
+    @Column(name = "duration")
     private Integer duration;
+
+    @ManyToOne
+    @JsonIgnoreProperties(value = "jobs")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
+
+    @ManyToOne
+    @JsonIgnoreProperties(value = "jobs")
+    @JoinColumn(name = "freelancer_id")
     private Freelancer freelancer;
 
     public Job(String title, String location, String description, Double price, Integer duration, Customer customer){
