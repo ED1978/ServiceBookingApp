@@ -1,6 +1,10 @@
-package com.codeclan.servicebooker.models.customers;
+package com.codeclan.servicebooker.models.users.customers;
 
-import com.codeclan.servicebooker.models.User;
+import com.codeclan.servicebooker.models.jobs.Job;
+import com.codeclan.servicebooker.models.users.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Customer extends User {
 

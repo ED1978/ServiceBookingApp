@@ -1,4 +1,9 @@
-package com.codeclan.servicebooker.models;
+package com.codeclan.servicebooker.models.users;
+
+import com.codeclan.servicebooker.models.reviews.Review;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class User {
 

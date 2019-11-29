@@ -1,6 +1,6 @@
-package com.codeclan.servicebooker.models.freelancers;
+package com.codeclan.servicebooker.models.users.freelancers;
 
-import com.codeclan.servicebooker.models.User;
+import com.codeclan.servicebooker.models.users.User;
 
 public class Freelancer extends User {
 

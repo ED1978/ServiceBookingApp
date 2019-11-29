@@ -1,7 +1,7 @@
 package com.codeclan.servicebooker.models.jobs;
 
-import com.codeclan.servicebooker.models.customers.Customer;
-import com.codeclan.servicebooker.models.freelancers.Freelancer;
+import com.codeclan.servicebooker.models.users.customers.Customer;
+import com.codeclan.servicebooker.models.users.freelancers.Freelancer;
 
 public class Job {
 
