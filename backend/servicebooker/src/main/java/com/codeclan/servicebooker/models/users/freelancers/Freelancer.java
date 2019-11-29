@@ -55,4 +55,11 @@ public class Freelancer extends User {
     public void addReview(Review review){
         this.reviews.add(review);
     }
+
+
+    public void removeReview(Review review){
+        if(this.reviews.contains(review)){
+            this.reviews.remove(review);
+        }
+    }
 }
