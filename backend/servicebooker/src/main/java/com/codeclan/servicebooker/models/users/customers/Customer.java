@@ -36,12 +36,26 @@ public class Customer extends User {
         return jobs;
     }
 
+    public int getLengthOfJobs(){
+        return this.jobs.size()
+;    }
+
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
     }
 
     public void addJob(Job job){
         this.jobs.add(job);
+    }
+
+    public void removeJob(Job job){
+        if (this.jobs.contains(job)){
+            this.jobs.remove(job);
+        }
+    }
+
+    public int getReviewsLength(){
+        return this.reviews.size();
     }
 
     public List<Review> getReviews() {
@@ -54,5 +68,11 @@ public class Customer extends User {
 
     public void addReview(Review review){
         this.reviews.add(review);
+    }
+
+    public void removeReview(Review review){
+        if(this.reviews.contains(review)){
+            this.reviews.remove(review);
+        }
     }
 }
