@@ -20,4 +20,10 @@ public class CustomerTest {
     public void customerHasName() {
         assertEquals("John Smith", customer1.getName());
     }
+
+    @Test
+    public void canSetCustomerName() {
+        customer1.setName("Dave Smith");
+        assertEquals("Dave Smith", customer1.getName());
+    }
 }
