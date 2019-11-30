@@ -2,7 +2,7 @@ package com.codeclan.servicebooker.controllers;
 
 
 import com.codeclan.servicebooker.models.jobs.Job;
-import com.codeclan.servicebooker.repositories.JobRepository;
+import com.codeclan.servicebooker.repositories.jobs.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

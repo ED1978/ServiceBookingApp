@@ -1,4 +1,4 @@
-package com.codeclan.servicebooker.repositories;
+package com.codeclan.servicebooker.repositories.jobs;
 
 import com.codeclan.servicebooker.models.jobs.Job;
 import org.springframework.data.jpa.repository.JpaRepository;

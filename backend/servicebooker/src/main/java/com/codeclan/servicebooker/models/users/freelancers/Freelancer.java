@@ -14,8 +14,6 @@ import java.util.List;
 public class Freelancer extends User {
 
 
-
-
     @Column(name = "category")
     private String category;
 
@@ -80,5 +78,22 @@ public class Freelancer extends User {
         if(this.reviews.contains(review)){
             this.reviews.remove(review);
         }
+    }
+
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
+
+    public List<Job> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Job> applications) {
+        this.applications = applications;
     }
 }
