@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import Request from '../helpers/request';
-import CustomerContainer from './customers/CustomerContainer';
 import FreelancerContainer from './freelancers/FreelancerContainer';
 
 class MainContainer extends Component{
@@ -35,8 +34,7 @@ class MainContainer extends Component{
   render(){
     return(
       <Fragment>
-        <CustomerContainer />
-        <FreelancerContainer />
+        <FreelancerContainer freelancers={this.state.freelancers}/>
       </Fragment>
     )
   }
