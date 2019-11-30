@@ -30,5 +30,4 @@ build/
 ### VS Code ###
 .vscode/
 
-src/main/java/com/codeclan/servicebooker/components/DataLoader.java
-src/main/java/com/codeclan/servicebooker/repositories/CustomerRepository.java
+
