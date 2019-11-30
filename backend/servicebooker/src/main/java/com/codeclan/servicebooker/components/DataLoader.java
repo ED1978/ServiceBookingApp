@@ -45,6 +45,13 @@ public class DataLoader implements ApplicationRunner {
         Job job1 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
         jobRepository.save(job1);
 
+        Job job2 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
+        jobRepository.save(job2);
+
+        customer1.addJob(job2);
+        customer1.addJob(job1);
+        customerRepository.save(customer1);
+
     }
 
 }
