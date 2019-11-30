@@ -4,6 +4,8 @@ import com.codeclan.servicebooker.models.jobs.Job;
 import com.codeclan.servicebooker.models.reviews.Review;
 import com.codeclan.servicebooker.models.users.customers.Customer;
 import com.codeclan.servicebooker.models.users.freelancers.Freelancer;
+import com.codeclan.servicebooker.repositories.FreelancerRepository;
+import com.codeclan.servicebooker.repositories.JobRepository;
 import com.codeclan.servicebooker.repositories.customer.CustomerRepository;
 import com.codeclan.servicebooker.repositories.review.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +19,14 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     CustomerRepository customerRepository;
 
-//    @Autowired
-//    FreelancerRepository freelancerRepository;
+    @Autowired
+    FreelancerRepository freelancerRepository;
 
     @Autowired
     ReviewRepository reviewRepository;
 
-//    @Autowired
-//    JobRepository jobRepository;
+    @Autowired
+    JobRepository jobRepository;
 
     public DataLoader(){
 
@@ -34,14 +36,14 @@ public class DataLoader implements ApplicationRunner {
         Customer customer1 = new Customer("Adam", "1 Something street", "blabla@gmail.com", "01", "endoftheworld");
         customerRepository.save(customer1);
 
-//        Freelancer freelancer1 = new Freelancer("Eric", "2 Something street", "blabla2@gmail.com", "02", "somewhere", "finance");
-//        freelancerRepository.save(freelancer1);
+        Freelancer freelancer1 = new Freelancer("Eric", "2 Something street", "blabla2@gmail.com", "02", "somewhere", "finance");
+        freelancerRepository.save(freelancer1);
 
-//        Review review1 = new Review(customer1, freelancer1, 4.5, "01-01-2017", "something fancy item");
-//        reviewRepository.save(review1);
+        Review review1 = new Review(customer1, freelancer1, 4.5, "01-01-2017", "something fancy item");
+        reviewRepository.save(review1);
 
-//        Job job1 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
-//        jobRepository.save(job1);
+        Job job1 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
+        jobRepository.save(job1);
 
     }
 

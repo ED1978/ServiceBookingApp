@@ -27,6 +27,23 @@ public class Freelancer extends User {
     @JsonIgnoreProperties(value = "freelancer")
     private List<Job> jobs;
 
+    @JsonIgnoreProperties(value="freelancers")
+    @ManyToMany
+    @JoinTable(
+            name = "freelancer_id",
+            joinColumns = { @JoinColumn(
+                    name = "freelancer_id",
+                    nullable = false,
+                    updatable = false
+            )},
+            inverseJoinColumns = { @JoinColumn(
+                    name = "job_id",
+                    nullable = false,
+                    updatable = false
+            )}
+    )
+    private List<Job> applications;
+
     public Freelancer(String name, String address, String email, String tellNo, String location, String category){
         super(name, address, email, tellNo, location);
         this.category = category;
