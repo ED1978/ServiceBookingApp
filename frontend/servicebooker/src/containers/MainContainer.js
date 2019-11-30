@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import Request from '../helpers/request';
-// import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
+import CustomerContainer from './customers/CustomerContainer';
+import FreelancerContainer from './freelancers/FreelancerContainer';
 
 class MainContainer extends Component{
   constructor(props){
@@ -34,9 +34,10 @@ class MainContainer extends Component{
 
   render(){
     return(
-      <div>
-        <p>MainContainer23</p>
-      </div>
+      <Fragment>
+        <CustomerContainer />
+        <FreelancerContainer />
+      </Fragment>
     )
   }
 }
