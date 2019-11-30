@@ -1,5 +1,6 @@
 import React, {Component , Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import FreelancerList from '../../components/freelancers/FreelancerList';
 
 class FreelancerContainer extends Component{
   constructor(props){
@@ -8,9 +9,17 @@ class FreelancerContainer extends Component{
 
   render(){
     return(
-      <div>
-        <p>FreelancerContainer</p>
-      </div>
+      <Router>
+        <Fragment>
+          <Switch>
+
+          <Route exact path="/freelancers" render={(props) => {
+            return <FreelancerList freelancers={this.props.freelancers} />
+          }}/>
+
+          </Switch>
+        </Fragment>
+      </Router>
     )
   }
 }

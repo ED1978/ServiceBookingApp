@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Request from '../helpers/request';
 import FreelancerContainer from './freelancers/FreelancerContainer';
+import NavBar from '../NavBar';
 
 class MainContainer extends Component{
   constructor(props){
@@ -34,6 +35,7 @@ class MainContainer extends Component{
   render(){
     return(
       <Fragment>
+        <NavBar />
         <FreelancerContainer freelancers={this.state.freelancers}/>
       </Fragment>
     )
