@@ -30,7 +30,7 @@ public class Freelancer extends User {
     @JsonIgnoreProperties(value="freelancers")
     @ManyToMany
     @JoinTable(
-            name = "freelancer_id",
+            name = "applicants_jobs",
             joinColumns = { @JoinColumn(
                     name = "freelancer_id",
                     nullable = false,
