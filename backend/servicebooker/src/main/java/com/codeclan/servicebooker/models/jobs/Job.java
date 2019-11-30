@@ -5,6 +5,8 @@ import com.codeclan.servicebooker.models.users.freelancers.Freelancer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "jobs")
@@ -40,6 +42,23 @@ public class Job {
     @JoinColumn(name = "freelancer_id")
     private Freelancer freelancer;
 
+    @JsonIgnoreProperties(value = "jobs")
+    @ManyToMany
+    @JoinTable(
+            name = "applicants_jobs",
+            joinColumns = { @JoinColumn(
+                    name = "job_id",
+                    nullable = false,
+                    updatable = false
+            )},
+            inverseJoinColumns = {@JoinColumn(
+                    name = "freelancer_id",
+                    nullable = false,
+                    updatable = false
+            )}
+    )
+    private List<Freelancer> applicants;
+
     public Job(String title, String location, String description, Double price, Integer duration, Customer customer){
         this.title = title;
         this.location = location;
@@ -47,10 +66,31 @@ public class Job {
         this.price = price;
         this.duration = duration;
         this.customer = customer;
+        this.applicants = new ArrayList<Freelancer>();
     }
 
     public Job(){
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void addApplicant(Freelancer applicant){
+        this.applicants.add(applicant);
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Freelancer> getApplicants() {
+        return applicants;
+    }
+
+    public void setApplicants(List<Freelancer> applicants) {
+        this.applicants = applicants;
     }
 
     public String getTitle() {
