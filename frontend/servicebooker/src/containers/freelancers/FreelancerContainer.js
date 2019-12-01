@@ -10,9 +10,10 @@ class FreelancerContainer extends Component{
   }
 
   findFreelancerById(id){
-    return this.props.freelancers.find((freelancer) => {
+    const freelancer = this.props.freelancers.find((freelancer) => {
       return freelancer.id === parseInt(id);
-    })
+    });
+    return freelancer;
   }
 
   render(){
@@ -26,7 +27,6 @@ class FreelancerContainer extends Component{
           }} />
 
           <Route exact path="/freelancers/:id" render={(props) => {
-            debugger
             const id = props.match.params.id;
             const freelancer = this.findFreelancerById(id);
             return <FreelancerDetail freelancer={freelancer} />
