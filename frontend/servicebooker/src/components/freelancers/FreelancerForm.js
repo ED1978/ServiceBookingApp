@@ -10,7 +10,8 @@ const FreelancerForm = (props) => {
       email: event.target.email.value,
       tellNo: event.target.tellNo.value,
       location: event.target.location.value,
-      category: event.target.category.value
+      category: event.target.category.value,
+      password: event.target.password.value
     }
     props.handlePost(freelancer);
   }
@@ -24,6 +25,7 @@ const FreelancerForm = (props) => {
         <input type="text" placeholder="Telephone Number" name="tellNo"/>
         <input type="text" placeholder="Location" name="location"/>
         <input type="text" placeholder="Category" name="category"/>
+        <input type="text" placeholder="Password" name="password"/>
         <button type="submit">Register</button>
       </form>
     </div>
