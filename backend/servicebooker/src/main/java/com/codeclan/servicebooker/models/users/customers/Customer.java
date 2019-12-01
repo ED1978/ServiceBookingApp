@@ -13,7 +13,10 @@ import java.util.List;
 @Table(name = "customers")
 public class Customer extends User {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "customer")
@@ -75,5 +78,13 @@ public class Customer extends User {
         if(this.reviews.contains(review)){
             this.reviews.remove(review);
         }
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
