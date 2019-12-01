@@ -26,6 +26,7 @@ class FreelancerContainer extends Component{
           }} />
 
           <Route exact path="/freelancers/:id" render={(props) => {
+            debugger
             const id = props.match.params.id;
             const freelancer = this.findFreelancerById(id);
             return <FreelancerDetail freelancer={freelancer} />
