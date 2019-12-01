@@ -3,6 +3,7 @@ import Request from '../helpers/request';
 import FreelancerContainer from './freelancers/FreelancerContainer';
 import NavBar from '../NavBar';
 import CustomerContainer from './customers/CustomerContainer';
+import JobsContainer from './jobs/JobsContainer';
 
 class MainContainer extends Component{
   constructor(props){
@@ -39,6 +40,7 @@ class MainContainer extends Component{
         <NavBar />
         <FreelancerContainer freelancers={this.state.freelancers}/>
         <CustomerContainer customers={this.state.customers}/>
+        <JobsContainer jobs={this.state.jobs} />
       </Fragment>
     )
   }
