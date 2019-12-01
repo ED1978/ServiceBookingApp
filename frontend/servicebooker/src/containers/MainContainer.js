@@ -4,6 +4,7 @@ import FreelancerContainer from './freelancers/FreelancerContainer';
 import NavBar from '../NavBar';
 import CustomerContainer from './customers/CustomerContainer';
 import JobsContainer from './jobs/JobsContainer';
+import LoginContainer from './login/LoginContainer';
 
 class MainContainer extends Component{
   constructor(props){
@@ -41,6 +42,7 @@ class MainContainer extends Component{
         <FreelancerContainer freelancers={this.state.freelancers}/>
         <CustomerContainer customers={this.state.customers}/>
         <JobsContainer jobs={this.state.jobs} />
+        <LoginContainer freelancers={this.state.freelancers}/>
       </Fragment>
     )
   }

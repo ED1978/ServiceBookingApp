@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FreelancerForm = (props) => {
-  console.log(props)
 
   function handleSubmit(event){
     event.preventDefault();
