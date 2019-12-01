@@ -23,14 +23,18 @@ public abstract class User{
     @Column(name = "rating")
     private Double rating;
 
+    @Column(name = "password")
+    private String password;
 
-    public User(String name, String address, String email, String tellNo, String location){
+
+    public User(String name, String address, String email, String tellNo, String location, String password){
         this.name = name;
         this.address = address;
         this.email = email;
         this.tellNo = tellNo;
         this.location = location;
         this.rating = 0.00;
+        this.password = password;
     }
 
     public User(){
@@ -85,5 +89,11 @@ public abstract class User{
         this.rating = rating;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

@@ -26,8 +26,8 @@ public class Customer extends User {
     @JsonIgnoreProperties(value = "customer")
     private List<Review> reviews;
 
-    public Customer(String name, String address, String email, String tellNo, String location){
-        super(name, address, email, tellNo, location);
+    public Customer(String name, String address, String email, String tellNo, String location, String password){
+        super(name, address, email, tellNo, location, password);
         this.jobs = new ArrayList<Job>();
         this .reviews = new ArrayList<Review>();
     }

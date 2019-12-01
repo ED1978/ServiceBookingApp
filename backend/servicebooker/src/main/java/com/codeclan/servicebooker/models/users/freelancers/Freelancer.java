@@ -46,8 +46,8 @@ public class Freelancer extends User {
     )
     private List<Job> applications;
 
-    public Freelancer(String name, String address, String email, String tellNo, String location, String category){
-        super(name, address, email, tellNo, location);
+    public Freelancer(String name, String address, String email, String tellNo, String location, String category, String password){
+        super(name, address, email, tellNo, location, password);
         this.category = category;
         this.reviews = new ArrayList<Review>();
         this.jobs = new ArrayList<Job>();
