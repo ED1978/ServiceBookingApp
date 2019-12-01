@@ -5,6 +5,15 @@ import LoginForm from '../../components/login/LoginForm';
 class LoginContainer extends Component{
   constructor(props){
     super(props);
+    this.state = {
+      enteredEmail: null,
+      enteredPassword: null
+    }
+    this.handleLogin = this.handleLogin.bind(this);
+  }
+
+  handleLogin(login){
+    this.setState(login)
   }
 
   render(){
@@ -14,7 +23,7 @@ class LoginContainer extends Component{
           <Switch>
 
             <Route exact path="/login" render={(props) => {
-              return <LoginForm />
+              return <LoginForm handleLogin={this.handleLogin}/>
             }}/>
 
           </Switch>
