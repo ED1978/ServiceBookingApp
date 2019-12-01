@@ -2,19 +2,19 @@ import React from 'react';
 import Freelancer from './Freelancer';
 
 const FreelancerDetail = (props) => {
-  if (!props.freelancer){
-    return "loading....."
+  if (!props.distillery){
+    return "Loading...."
   }
 
   return(
     <div className="component">
-      <Freelancer freelancer={props.freelancer} />
-      <p>Address: {props.Freelancer.address}</p>
-      <p>Email:: {props.Freelancer.email}</p>
-      <p>Tel:: {props.Freelancer.tellNo}</p>
-      <p>Location: {props.Freelancer.location}</p>
-      <p>Rating: {props.Freelancer.rating}</p>
-      <p>Category: {props.Freelancer.category}</p>
+      <Freelancer freelancer={this.props.freelancer} />
+      <p>Address: {this.props.freelancer.address}</p>
+      <p>Email:: {this.props.freelancer.email}</p>
+      <p>Tel:: {this.props.freelancer.tellNo}</p>
+      <p>Location: {this.props.freelancer.location}</p>
+      <p>Rating: {this.props.freelancer.rating}</p>
+      <p>Category: {this.props.freelancer.category}</p>
     </div>
   )
 }

@@ -9,12 +9,10 @@ class FreelancerContainer extends Component{
     this.findFreelancerById = this.findFreelancerById.bind(this);
   }
 
-
   findFreelancerById(id){
-    const freelancer = this.props.freelancers.find((freelancer) => {
+    return this.props.freelancers.find((freelancer) => {
       return freelancer.id === parseInt(id);
     })
-    return freelancer;
   }
 
   render(){
