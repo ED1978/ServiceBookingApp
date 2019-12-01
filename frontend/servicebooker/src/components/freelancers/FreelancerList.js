@@ -2,7 +2,7 @@ import React from 'react';
 import Freelancer from './Freelancer';
 
 const FreelancerList = (props) => {
-  if (props.freelancers.length ===0){
+  if (props.freelancers.length === 0){
     return (<p>Loading....</p>)
   }
 
