@@ -6,6 +6,10 @@ const FreelancerDetail = (props) => {
     return "Loading...."
   }
 
+  const handleDelete = () => {
+    props.onDelete(props.freelancer.id)
+  }
+
   return(
     <div className="component">
       <Freelancer freelancer={props.freelancer} />
@@ -15,6 +19,7 @@ const FreelancerDetail = (props) => {
       <p>Location: {props.freelancer.location}</p>
       <p>Rating: {props.freelancer.rating}</p>
       <p>Category: {props.freelancer.category}</p>
+      <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
     </div>
   )
 }
