@@ -5,27 +5,20 @@ import LoginForm from '../../components/login/LoginForm';
 class LoginContainer extends Component{
   constructor(props){
     super(props);
-    this.state = {
-      enteredEmail: null,
-      enteredPassword: null,
-      user: null
-    }
     this.handleLogin = this.handleLogin.bind(this);
   }
 
   handleLogin(login){
-    this.setState(login);
-    this.setState({
-      user: null
-    })
     let freelancer;
+    let foundUser;
     for (freelancer of this.props.freelancers){
       if (freelancer.email === login.enteredEmail){
-        console.log(freelancer);
-        this.setState({
-          user: freelancer
-        })
+        foundUser = freelancer
+        console.log(foundUser)
       }
+    }
+    if((foundUser != null) && (foundUser.password === login.enteredPassword)){
+      window.location = '/freelancers/' + foundUser.id
     }
   }
 
