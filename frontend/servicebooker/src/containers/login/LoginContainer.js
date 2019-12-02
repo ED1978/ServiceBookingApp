@@ -10,16 +10,21 @@ class LoginContainer extends Component{
 
   handleLogin(login){
     let freelancer;
-    let foundUser;
+    let foundUser = null;
     for (freelancer of this.props.freelancers){
       if (freelancer.email === login.enteredEmail){
-        foundUser = freelancer
-        console.log(foundUser)
+        foundUser = freelancer;
       }
     }
-    if((foundUser != null) && (foundUser.password === login.enteredPassword)){
+    if(foundUser !== null){
+      if (foundUser.password !== login.enteredPassword){
+        console.log("Incorrect Password")
+      } else if (foundUser.password === login.enteredPassword){
       window.location = '/freelancers/' + foundUser.id
-    }
+     }
+   } else {
+     console.log("incorrect email")
+   }
   }
 
   render(){
