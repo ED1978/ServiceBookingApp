@@ -11,6 +11,9 @@ const NavBar = (props) => {
           <a href="/freelancers">Freelancers</a>
         </li>
         <li className="nav-link">
+          <a href="/freelancers/new">Become a Freelancer</a>
+        </li>
+        <li className="nav-link">
           <a href="/jobs">Jobs</a>
         </li>
       </ul>

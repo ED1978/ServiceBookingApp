@@ -47,13 +47,7 @@ public class DataLoader implements ApplicationRunner {
         Review review1 = new Review(customer1, freelancer1, 4.5, "01-01-2017", "something fancy item");
         reviewRepository.save(review1);
 
-        Review review2 = new Review(customer2, freelancer1, 1.0, "01-01-2017", "something fancy item");
-        reviewRepository.save(review2);
-
-        Review review3 = new Review(customer1, freelancer1, 5.0, "01-01-2017", "something fancy item");
-        reviewRepository.save(review3);
-
-        Job job1 = new Job("something1", "somewhere", "something fancy description", 3.40, 5, customer1);
+        Job job1 = new Job("something", "somewhere", "something fancy description", 3.49, 5, customer1);
         jobRepository.save(job1);
 
         Job job2 = new Job("something2", "somewhere", "something fancy description", 3.40, 5, customer1);
