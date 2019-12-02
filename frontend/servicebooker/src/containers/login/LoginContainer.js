@@ -15,11 +15,16 @@ class LoginContainer extends Component{
 
   handleLogin(login){
     this.setState(login);
+    this.setState({
+      user: null
+    })
     let freelancer;
-    let foundUser;
     for (freelancer of this.props.freelancers){
-      if (freelancer.email === this.state.enteredEmail){
-        console.log(freelancer)
+      if (freelancer.email === login.enteredEmail){
+        console.log(freelancer);
+        this.setState({
+          user: freelancer
+        })
       }
     }
   }
