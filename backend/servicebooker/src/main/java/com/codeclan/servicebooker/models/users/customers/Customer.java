@@ -26,10 +26,14 @@ public class Customer extends User {
     @JsonIgnoreProperties(value = "customer")
     private List<Review> reviews;
 
+    @Column(name = "user_type")
+    private String userType;
+
     public Customer(String name, String address, String email, String tellNo, String location, String password){
         super(name, address, email, tellNo, location, password);
         this.jobs = new ArrayList<Job>();
-        this .reviews = new ArrayList<Review>();
+        this.reviews = new ArrayList<Review>();
+        this.userType = "customer";
     }
 
     public Customer(){
@@ -86,5 +90,13 @@ public class Customer extends User {
 
     public void setId(Long id) {
         this.Id = id;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

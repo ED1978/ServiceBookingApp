@@ -42,7 +42,7 @@ class MainContainer extends Component{
         <FreelancerContainer freelancers={this.state.freelancers}/>
         <CustomerContainer customers={this.state.customers}/>
         <JobsContainer jobs={this.state.jobs} />
-        <LoginContainer freelancers={this.state.freelancers}/>
+        <LoginContainer freelancers={this.state.freelancers} customers={this.state.customers}/>
       </Fragment>
     )
   }

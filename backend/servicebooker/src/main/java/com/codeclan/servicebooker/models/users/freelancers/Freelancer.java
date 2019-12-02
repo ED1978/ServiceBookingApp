@@ -21,6 +21,9 @@ public class Freelancer extends User {
     @Column(name = "category")
     private String category;
 
+    @Column(name = "user_type")
+    private String userType;
+
     @OneToMany(mappedBy = "freelancer", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "freelancer")
     private List<Review> reviews;
@@ -51,6 +54,7 @@ public class Freelancer extends User {
         this.category = category;
         this.reviews = new ArrayList<Review>();
         this.jobs = new ArrayList<Job>();
+        this.userType = "freelancer";
     }
 
     public Freelancer(){
@@ -107,5 +111,13 @@ public class Freelancer extends User {
 
     public void setId(Long id) {
         this.Id = id;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }
