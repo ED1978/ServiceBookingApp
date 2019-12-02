@@ -36,6 +36,9 @@ public class DataLoader implements ApplicationRunner {
         Customer customer1 = new Customer("Adam", "1 Something street", "blabla@gmail.com", "01", "endoftheworld");
         customerRepository.save(customer1);
 
+        Customer customer2 = new Customer("Adam", "1 Something street", "blabla@gmail.com", "01", "endoftheworld");
+        customerRepository.save(customer2);
+
         Freelancer freelancer1 = new Freelancer("Eric", "2 Something street", "blabla2@gmail.com", "02", "somewhere", "finance");
         freelancerRepository.save(freelancer1);
         Freelancer freelancer2 = new Freelancer("Steve", "3 Something street", "blabla2@gmail.com", "02", "somewhere", "finance");
@@ -44,11 +47,20 @@ public class DataLoader implements ApplicationRunner {
         Review review1 = new Review(customer1, freelancer1, 4.5, "01-01-2017", "something fancy item");
         reviewRepository.save(review1);
 
-        Job job1 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
+        Review review2 = new Review(customer2, freelancer1, 1.0, "01-01-2017", "something fancy item");
+        reviewRepository.save(review2);
+
+        Review review3 = new Review(customer1, freelancer1, 5.0, "01-01-2017", "something fancy item");
+        reviewRepository.save(review3);
+
+        Job job1 = new Job("something1", "somewhere", "something fancy description", 3.40, 5, customer1);
         jobRepository.save(job1);
 
-        Job job2 = new Job("something", "somewhere", "something fancy description", 3.40, 5, customer1);
+        Job job2 = new Job("something2", "somewhere", "something fancy description", 3.40, 5, customer1);
         jobRepository.save(job2);
+
+        Job job3 = new Job("something3", "somewhere", "something fancy description", 3.40, 5, customer2);
+        jobRepository.save(job3);
 
         customer1.addJob(job2);
         customer1.addJob(job1);

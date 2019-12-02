@@ -13,19 +13,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/jobs")
+@RequestMapping(value = "/api/jobs")
 public class JobController {
 
     @Autowired
     JobRepository jobRepository;
 
-    @GetMapping
-    public List<Job> getAllJobs(){
-        return jobRepository.findAll();
-    }
-
-    @GetMapping("{id}")
-    public Optional<Job> getJob(@PathVariable Long id){
-        return jobRepository.findById(id);
+    @GetMapping(value = "/customers/{id}")
+    public List<Job> getJobByCustomerId(@PathVariable Long id) {
+        return jobRepository.getJobByCustomerId(id);
     }
 }

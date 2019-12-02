@@ -16,7 +16,7 @@ public class Freelancer extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Long Id;
 
     @Column(name = "category")
     private String category;
@@ -102,10 +102,10 @@ public class Freelancer extends User {
     }
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.Id = id;
     }
 }

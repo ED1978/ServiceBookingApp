@@ -16,7 +16,7 @@ public class Customer extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Long Id;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "customer")
@@ -81,10 +81,10 @@ public class Customer extends User {
     }
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.Id = id;
     }
 }

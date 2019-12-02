@@ -1,6 +1,7 @@
-package com.codeclan.servicebooker.repositories.review;
+package com.codeclan.servicebooker.repositories.jobs;
 
-import com.codeclan.servicebooker.models.reviews.Review;
+import com.codeclan.servicebooker.models.jobs.Job;
+import com.codeclan.servicebooker.models.users.customers.Customer;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -11,18 +12,18 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public class ReviewRepositoryImpl implements ReviewRepositoryCustom{
+public class JobRepositoryImpl {
 
     @Autowired
     EntityManager entityManager;
 
     @Transactional
-    public List<Review> getReviewByCustomerId(Long customer_id) {
-        List<Review> results = null;
+    public List<Job> getJobByCustomerId(Long customer_id) {
+        List<Job> results = null;
         Session session = entityManager.unwrap(Session.class);
 
         try {
-            Criteria cr = session.createCriteria(Review.class);
+            Criteria cr = session.createCriteria(Job.class);
             cr.createAlias("customer", "customerAlias");
             cr.add(Restrictions.eq("customerAlias.Id", customer_id));
             results = cr.list();
