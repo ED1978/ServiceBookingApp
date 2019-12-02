@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
 
         Freelancer freelancer1 = new Freelancer("Eric", "2 Something street", "blabla2@gmail.com", "02", "somewhere", "finance", "getRichOrdietryin68");
         freelancerRepository.save(freelancer1);
-        Freelancer freelancer2 = new Freelancer("Steve", "3 Something street", "blabla2@gmail.com", "02", "somewhere", "finance", "sellYerGranny");
+        Freelancer freelancer2 = new Freelancer("Steve", "3 Something street", "blabla3@gmail.com", "02", "somewhere", "finance", "sellYerGranny");
         freelancerRepository.save(freelancer2);
 
         Review review1 = new Review(customer1, freelancer1, 4.5, "01-01-2017", "something fancy item");
