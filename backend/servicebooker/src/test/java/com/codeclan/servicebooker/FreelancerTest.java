@@ -12,7 +12,7 @@ public class FreelancerTest {
 
     @Before
     public void before(){
-        freelancer = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden");
+        freelancer = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden", "lfve");
     }
 
     @Test

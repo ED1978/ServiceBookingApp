@@ -28,15 +28,15 @@ class ServicebookerApplicationTests {
 
 	@Test
 	void createFreelancer() {
-		Freelancer freelancer1 = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden");
-		Freelancer freelancer2 = new Freelancer("John's Joiners", "Spey Road", "John@JsJNRS.co.uk", "07455122399", "Bearsden", "Building");
+		Freelancer freelancer1 = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden", "kosjd");
+		Freelancer freelancer2 = new Freelancer("John's Joiners", "Spey Road", "John@JsJNRS.co.uk", "07455122399", "Bearsden", "Building", "kdnfor");
 		freelancerRepository.save(freelancer1);
 		freelancerRepository.save(freelancer2);
 	}
 
 	@Test
 	void createJob() {
-		Customer customer = new Customer("John Smith", "77 Renfrew Street", "jnvkjhsdf", "5435466868", "jsdlkjfwjkl");
+		Customer customer = new Customer("John Smith", "77 Renfrew Street", "jnvkjhsdf", "5435466868", "jsdlkjfwjkl", "ljnd");
 		Job job = new Job("nsdfnsdj", "lndfkjrf", "kjfjkwkjf", 9.00, 8, customer);
 		customerRepository.save(customer);
 		jobRepository.save(job);

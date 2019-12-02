@@ -12,7 +12,7 @@ class FreelancerFormContainer extends Component {
     const request = new Request();
     request.post('/api/freelancers', freelancer)
     .then(() => {
-      window.location = '/freelancers'
+      window.location = '/login'
     })
   }
 

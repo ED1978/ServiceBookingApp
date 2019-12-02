@@ -19,8 +19,8 @@ public class CustomerTest {
 
     @Before
     public void before(){
-        customer1 = new Customer("John Smith", "77 Renfrew Street", "john@gmail.com", "07898544265", "Glasgow");
-        freelancer1 = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden");
+        customer1 = new Customer("John Smith", "77 Renfrew Street", "john@gmail.com", "07898544265", "Glasgow", ";jfvj");
+        freelancer1 = new Freelancer("Graham's Gairdens", "Hillington Road", "Gsgs@gairdener.com", "07451235699", "Hillington", "Garden", "jldjhqp");
         job1 = new Job("Grass cutting", "Glasgow", "Weekly cutting of front and back lawns", 9.99, 4, customer1);
         review1 = new Review(customer1, freelancer1, 5.00, "29/11/2019", "Graham's Gairdens have been my reliable gairdener for near on 20 years, I wouldn't go to anyone else");
     }
