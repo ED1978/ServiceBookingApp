@@ -1,5 +1,8 @@
 import React from 'react';
 import Freelancer from './Freelancer';
+import JobsList from '../jobs/JobsList';
+import JobDetails from '../jobs/JobDetails';
+import Job from '../jobs/Job';
 
 const FreelancerDetail = (props) => {
   if (!props.freelancer){
@@ -20,6 +23,9 @@ const FreelancerDetail = (props) => {
       <p>Rating: {props.freelancer.rating}</p>
       <p>Category: {props.freelancer.category}</p>
       <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
+      <div className="jobs-list">
+        <JobsList jobs={props.jobs} />
+      </div>
     </div>
   )
 }
