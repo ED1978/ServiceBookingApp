@@ -45,7 +45,7 @@ class FreelancerContainer extends Component{
           <Route exact path="/freelancers/:id" render={(props) => {
             const id = props.match.params.id;
             const freelancer = this.findFreelancerById(id);
-            return <FreelancerDetail freelancer={freelancer} onDelete={this.handleDelete} />
+            return <FreelancerDetail freelancer={freelancer} onDelete={this.handleDelete} jobs={this.props.jobs} />
           }} />
 
           </Switch>
