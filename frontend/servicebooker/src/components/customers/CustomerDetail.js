@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import Customer from './Customer';
 import CustomerJobList from './CustomerJobList';
 import Request from '../../helpers/request';
 import CustomerReviewList from './CustomerReviewList';
+import CustomerFormContainer from '../../containers/customers/CustomerFormContainer';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class CustomerDetail extends Component {
   constructor(props) {
@@ -71,6 +74,7 @@ class CustomerDetail extends Component {
       <CustomerJobList jobs={this.state.customerJobs}/>
       <p>Rating:</p>
       <CustomerReviewList reviews={this.state.customerReviews}/>
+      <button><a href={this.props.newjob_url}>New Job</a></button>
       <button><a href="/customers">Go Back</a></button>
       </div>
     )

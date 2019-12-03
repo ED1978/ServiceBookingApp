@@ -5,6 +5,7 @@ import CustomerDetail from '../../components/customers/CustomerDetail';
 import Request from '../../helpers/request';
 import CustomerJobList from '../../components/customers/CustomerJobList';
 import CustomerReviewList from '../../components/customers/CustomerReviewList';
+import CustomerFormContainer from './CustomerFormContainer';
 
 
 class CustomerContainer extends Component {
@@ -14,6 +15,7 @@ class CustomerContainer extends Component {
       customerJob: []
     }
     this.findCustomerById = this.findCustomerById.bind(this);
+    this.findJobById = this.findJobById.bind(this);
   }
 
     findCustomerById(id) {
@@ -21,6 +23,13 @@ class CustomerContainer extends Component {
         return customer.id === parseInt(id)
       })
       return customer;
+    }
+
+    findJobById(id) {
+      const job = this.props.jobs.find((job) => {
+        return job.id === parseInt(id)
+      })
+      return job;
     }
 
     render() {
@@ -34,7 +43,8 @@ class CustomerContainer extends Component {
             <Route exact path="/customers/:id" render={(props) => {
               const id = props.match.params.id;
               const customer = this.findCustomerById(id);
-              return <CustomerDetail customer={customer}/>
+              const url = "/customers/" + id + "/newjob";
+              return <CustomerDetail customer={customer} newjob_url={url}/>
             }}/>
             <Route exact path="/customers/:id/jobs" render={(props) => {
               const id = props.match.params.id;
@@ -43,6 +53,12 @@ class CustomerContainer extends Component {
             <Route exact path="/customers/:id/reviews" render={(props) => {
               const id = props.match.params.id;
               return <CustomerReviewList reviews={this.state.reviews}/>
+            }}/>
+            <Route exact path="/customers/:id/newjob" render={(props) =>{
+              const id = props.match.params.id;
+              const customer = this.findCustomerById(id);
+              const url = "/customers/" + id;
+              return <CustomerFormContainer customer={customer} url={url}/>
             }}/>
             </Switch>
           </Fragment>

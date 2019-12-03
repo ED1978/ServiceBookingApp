@@ -6,9 +6,11 @@ const CustomerJob = (props) => {
     return 'Loading...'
   }
 
+  const url = '/jobs/' + props.job.id;
+
   return (
     <Fragment>
-      <p>{props.job.title}</p>
+      <a href={url}>{props.job.title}</a>
     </Fragment>
   )
 
