@@ -7,6 +7,7 @@ import CustomerJobList from '../../components/customers/CustomerJobList';
 import CustomerReviewList from '../../components/customers/CustomerReviewList';
 import CustomerFormContainer from './CustomerFormContainer';
 import CustomerCreateFormContainer from './CustomerCreateFormContainer'
+import CustomerEditFormContainer from './CustomerEditFormContainer';
 
 
 class CustomerContainer extends Component {
@@ -45,6 +46,12 @@ class CustomerContainer extends Component {
             <Route exact path='/customers/new' render={(props) => {
               return <CustomerCreateFormContainer />
             }} />
+
+            <Route exact path="/customers/edit/:id" render={(props) => {
+              const id = props.match.params.id;
+              const customer = this.findCustomerById(id);
+              return <CustomerEditFormContainer customer={customer}/>
+            }}/>
 
             <Route exact path="/customers/:id" render={(props) => {
               const id = props.match.params.id;

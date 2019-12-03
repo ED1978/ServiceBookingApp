@@ -27,7 +27,7 @@ const FreelancerDetail = (props) => {
       <p>Rating: {props.freelancer.rating}</p>
       <p>Category: {props.freelancer.category}</p>
       <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
-      <Link to={editUrl}><button type="button"> Edit {props.freelancer.name}</button></Link>
+      <Link to={editUrl}><button type="button">Edit {props.freelancer.name}</button></Link>
     </div>
   )
 }
