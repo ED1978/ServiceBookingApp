@@ -14,6 +14,9 @@ const FreelancerDetail = (props) => {
     props.onDelete(props.freelancer.id)
   }
 
+  const editUrl = '/freelancers/edit/' + props.freelancer.id;
+  console.log(editUrl)
+
   return(
     <div className="component">
       <Freelancer freelancer={props.freelancer} />
@@ -24,7 +27,8 @@ const FreelancerDetail = (props) => {
       <p>Rating: {props.freelancer.rating}</p>
       <p>Category: {props.freelancer.category}</p>
       <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
-      </div>
+      <Link to={editUrl}><button type="button">Edit {props.freelancer.name}</button></Link>
+    </div>
   )
 }
 

@@ -15,6 +15,7 @@ class CustomerDetail extends Component {
       customerJobs: null,
       customerReviews: null
     }
+    this.getEditUrl = this.getEditUrl.bind(this);
   }
 
 
@@ -59,9 +60,15 @@ class CustomerDetail extends Component {
     })
   }
 
+  getEditUrl(){
+    const editUrl = '/customers/edit/' + this.props.customer.id;
+    return editUrl;
+  }
+
   render() {
 
     if (!this.props.customer || !this.state.customerJobs || !this.state.customerReviews) return "Loading...";
+
 
     return (
       <div>
@@ -76,6 +83,7 @@ class CustomerDetail extends Component {
       <CustomerReviewList reviews={this.state.customerReviews}/>
       <button><a href={this.props.newjob_url}>New Job</a></button>
       <button><a href="/customers">Go Back</a></button>
+      <Link to={this.getEditUrl}><button type="button">Edit {this.props.customer.name}</button></Link>
       </div>
     )
   }
