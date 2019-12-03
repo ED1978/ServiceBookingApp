@@ -8,6 +8,9 @@ const NavBar = (props) => {
           <a href='/customers'>Customers</a>
         </li>
         <li className="nav-link">
+          <a href="/customers/new">Bocome a Customer</a>
+        </li>
+        <li className="nav-link">
           <a href="/freelancers">Freelancers</a>
         </li>
         <li className="nav-link">
