@@ -41,7 +41,7 @@ class MainContainer extends Component{
         <NavBar />
         <FreelancerContainer freelancers={this.state.freelancers} jobs={this.state.jobs}/>
         <CustomerContainer customers={this.state.customers}/>
-        <JobsContainer jobs={this.state.jobs} />
+        <JobsContainer jobs={this.state.jobs} freelancers={this.state.freelancers}/>
         <LoginContainer freelancers={this.state.freelancers} customers={this.state.customers}/>
       </Fragment>
     )

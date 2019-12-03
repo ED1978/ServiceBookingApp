@@ -1,5 +1,6 @@
 import React from 'react';
 import Job from './Job';
+import {Link} from 'react-router-dom';
 
 const JobDetails = (props) => {
   console.log(props)
@@ -7,6 +8,8 @@ const JobDetails = (props) => {
   if (!props.job){
     return "Loading....."
   }
+
+  const editUrl ='/jobs/edit/' + props.job.id;
 
   return(
     <div>
@@ -16,6 +19,7 @@ const JobDetails = (props) => {
       <p>Description: {props.job.description}</p>
       <p>Hourly Rate: £{props.job.price}/hr</p>
       <p>Estimated Duration: {props.job.duration} Hours</p>
+      <Link to={editUrl}><button type="button">Apply for Jobs</button></Link>
     </div>
   )
 }

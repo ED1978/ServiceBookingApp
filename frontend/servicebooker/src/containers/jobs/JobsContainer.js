@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import JobsList from '../../components/jobs/JobsList';
 import JobDetails from '../../components/jobs/JobDetails';
+import JobFormContainer from './JobFormContainer';
 
 class JobsContainer extends Component{
   constructor(props){
@@ -30,6 +31,12 @@ class JobsContainer extends Component{
             const id = props.match.params.id;
             const job = this.findJobById(id);
             return <JobDetails job={job} />
+          }} />
+
+          <Route exact path="/jobs/edit/:id" render={(props) => {
+            const id = props.match.params.id;
+            const job = this.findJobById(id);
+            return <JobFormContainer job={job} freelancers={this.props.freelancers}/>
           }} />
 
           </Switch>
