@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
+import CustomerEditForm from '../../components/customers/CustomerEditForm';
 
 class CustomerEditFormContainer extends Component {
   constructor(props){
@@ -18,8 +19,8 @@ class CustomerEditFormContainer extends Component {
   render(){
     return(
       <div>
-        <p>CustomerEditFormContainer</p>
-      </div>
+        <CustomerEditForm customer={this.props.customer} handleUpdate={this.handleCustomerUpdate} />
+       </div>
     )
   }
 
