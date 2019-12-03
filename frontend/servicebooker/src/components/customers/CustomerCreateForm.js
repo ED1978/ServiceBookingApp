@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-const FreelancerForm = (props) => {
+const CustomerCreateForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
-    const freelancer = {
+    const customer = {
       name: event.target.name.value,
       address: event.target.address.value,
       email: event.target.email.value,
       tellNo: event.target.tellNo.value,
       location: event.target.location.value,
-      category: event.target.category.value,
       password: event.target.password.value,
-      userType: "freelancer"
+      userType: "customer"
     }
-    props.handlePost(freelancer);
+    props.handlePost(customer);
   }
 
   return(
@@ -25,13 +24,11 @@ const FreelancerForm = (props) => {
         <input type="text" placeholder="Email" name="email"/>
         <input type="text" placeholder="Telephone Number" name="tellNo"/>
         <input type="text" placeholder="Location" name="location"/>
-        <input type="text" placeholder="Category" name="category"/>
         <input type="text" placeholder="Password" name="password"/>
         <button type="submit">Register</button>
       </form>
     </div>
   )
-
 }
 
-export default FreelancerForm;
+export default CustomerCreateForm;
