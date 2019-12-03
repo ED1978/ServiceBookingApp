@@ -17,7 +17,9 @@ class FreelancerEditFormContainer extends Component {
   }
   render(){
     return(
-      <FreelancerEditForm freelancer={this.props.pirate}/>
+      <div>
+        <FreelancerEditForm freelancer={this.props.freelancer} handleUpdate={this.handleFreelancerUpdate}/>
+      </div>
     )
   }
 

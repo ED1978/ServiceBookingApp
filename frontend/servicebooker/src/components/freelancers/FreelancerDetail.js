@@ -15,6 +15,7 @@ const FreelancerDetail = (props) => {
   }
 
   const editUrl = '/freelancers/edit/' + props.freelancer.id;
+  console.log(editUrl)
 
   return(
     <div className="component">

@@ -43,8 +43,8 @@ class FreelancerContainer extends Component{
             return <FreelancerFormContainer />
           }} />
 
-          <Route exact path="/freelancers/edit/id:" render={(props) => {
-            const id = props.match.params;
+          <Route exact path='/freelancers/edit/:id' render={(props) => {
+            const id = props.match.params.id
             const freelancer = this.findFreelancerById(id);
             return <FreelancerEditFormContainer freelancer={freelancer} />
           }} />
