@@ -5,6 +5,7 @@ import FreelancerDetail from '../../components/freelancers/FreelancerDetail';
 import Request from '../../helpers/request.js'
 import FreelancerFormContainer from './FreelancerFormContainer';
 import JobApplicationContainer from '../jobs/JobApplicationContainer';
+import FreelancerEditFormContainer from './FreelancerEditFormContainer';
 
 class FreelancerContainer extends Component{
   constructor(props){
@@ -41,6 +42,12 @@ class FreelancerContainer extends Component{
 
           <Route exact path='/freelancers/new' render={(props) => {
             return <FreelancerFormContainer />
+          }} />
+
+          <Route exact path='/freelancers/edit/:id' render={(props) => {
+            const id = props.match.params.id
+            const freelancer = this.findFreelancerById(id);
+            return <FreelancerEditFormContainer freelancer={freelancer} />
           }} />
 
           <Route exact path="/freelancers/:id" render={(props) => {

@@ -3,6 +3,7 @@ import Freelancer from './Freelancer';
 import JobsList from '../jobs/JobsList';
 import JobDetails from '../jobs/JobDetails';
 import Job from '../jobs/Job';
+import {Link} from 'react-router-dom';
 
 const FreelancerDetail = (props) => {
   if (!props.freelancer){
@@ -12,6 +13,9 @@ const FreelancerDetail = (props) => {
   const handleDelete = () => {
     props.onDelete(props.freelancer.id)
   }
+
+  const editUrl = '/freelancers/edit/' + props.freelancer.id;
+  console.log(editUrl)
 
   return(
     <div className="component">
@@ -24,6 +28,7 @@ const FreelancerDetail = (props) => {
       <p>Category: {props.freelancer.category}</p>
       <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
       <button><a href='/freelancers'>Go Back</a></button>
+      <Link to={editUrl}><button type="button">Edit {props.freelancer.name}</button></Link>
     </div>
   )
 }

@@ -15,6 +15,7 @@ class CustomerDetail extends Component {
     }
     this.averageRating = this.averageRating.bind(this);
     this.numberOfElements = this.numberOfElements.bind(this);
+    this.getEditUrl = this.getEditUrl.bind(this);
   }
 
   componentDidUpdate(){
@@ -43,13 +44,18 @@ class CustomerDetail extends Component {
     for (let i=0; i<totalReview; i++) {
       counter += this.state.customerReviews[i].rating;
     }
+  }
     const average = counter / totalReview;
     return average;
+  getEditUrl(){
+    const editUrl = '/customers/edit/' + this.props.customer.id;
+    return editUrl;
   }
 
   render() {
 
     if (!this.props.customer || !this.state.customerJobs || !this.state.customerReviews) return "Loading...";
+
 
     return (
       <div>
@@ -64,6 +70,7 @@ class CustomerDetail extends Component {
       <button><a href={this.props.newjob_url}>New Job</a></button>
       <button><a href="/customers">Go Back</a></button>
       <button><a href={this.props.newrating_url}>Give me a rating</a></button>
+      <Link to={this.getEditUrl}><button type="button">Edit {this.props.customer.name}</button></Link>
       </div>
     )
   }

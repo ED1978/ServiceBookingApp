@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import JobsList from '../../components/jobs/JobsList';
 import JobDetails from '../../components/jobs/JobDetails';
+import JobFormContainer from './JobFormContainer';
 
 import JobApplicationContainer from './JobApplicationContainer';
 
@@ -43,6 +44,11 @@ class JobsContainer extends Component{
             const job_url = '/jobs/' + id;
             return <JobApplicationContainer url={url} job={job} job_url={job_url} freelancers={this.props.freelancers}/>
           }}/>
+          <Route exact path="/jobs/edit/:id" render={(props) => {
+            const id = props.match.params.id;
+            const job = this.findJobById(id);
+            return <JobFormContainer job={job} freelancers={this.props.freelancers}/>
+          }} />
 
           </Switch>
         </Fragment>
