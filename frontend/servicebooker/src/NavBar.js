@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBarContainer from './containers/search/SearchBarContainer';
+
 
 const NavBar = (props) => {
   return(
@@ -24,7 +24,6 @@ const NavBar = (props) => {
           <a href="/login">Login</a>
         </li>
       </ul>
-      <SearchBarContainer/>
     </header>
   )
 }

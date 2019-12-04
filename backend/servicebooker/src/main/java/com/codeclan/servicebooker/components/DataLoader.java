@@ -36,66 +36,66 @@ public class DataLoader implements ApplicationRunner {
 
 //         CUSTOMERS:
 
-        Customer customer1 = new Customer("Adam Hidvegi", "1 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer1 = new Customer("Adam Hidvegi", "1 Renfrew Street", "Glasgow", "sample1@gmail.com", "07400123456", "password1");
         customerRepository.save(customer1);
 
-        Customer customer2 = new Customer("Alan Turing", "2 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer2 = new Customer("Alan Turing", "2 Renfrew Street", "Glasgow", "sample2@gmail.com", "07400123456", "password2");
         customerRepository.save(customer2);
 
-        Customer customer3 = new Customer("Tim Berners-Lee", "3 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer3 = new Customer("Tim Berners-Lee", "3 Renfrew Street", "Glasgow", "sample3@gmail.com", "07400123456", "password3");
         customerRepository.save(customer3);
 
-        Customer customer4 = new Customer("Ada Lovelace", "4 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer4 = new Customer("Ada Lovelace", "4 Renfrew Street", "Glasgow", "sample@4gmail.com", "07400123456", "password4");
         customerRepository.save(customer4);
 
-        Customer customer5 = new Customer("Satoshi Nakamoto", "5 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer5 = new Customer("Satoshi Nakamoto", "5 Renfrew Street", "Glasgow", "sample5@gmail.com", "07400123456", "password5");
         customerRepository.save(customer5);
 
-        Customer customer6 = new Customer("Linus Torvalds", "6 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer6 = new Customer("Linus Torvalds", "6 Renfrew Street", "Glasgow", "sample6@gmail.com", "07400123456", "password6");
         customerRepository.save(customer6);
 
-        Customer customer7 = new Customer("Ken Thompson", "7 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer7 = new Customer("Ken Thompson", "7 Renfrew Street", "Glasgow", "sample7@gmail.com", "07400123456", "password7");
         customerRepository.save(customer7);
 
-        Customer customer8 = new Customer("Mark Zuckerberg", "8 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer8 = new Customer("Mark Zuckerberg", "8 Renfrew Street", "Glasgow", "sample8@gmail.com", "07400123456", "password8");
         customerRepository.save(customer8);
 
-        Customer customer9 = new Customer("Bill Gates", "9 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer9 = new Customer("Bill Gates", "9 Renfrew Street", "Glasgow", "sample9@gmail.com", "07400123456", "password9");
         customerRepository.save(customer9);
 
-        Customer customer10 = new Customer("Larry Page", "10 Renfrew Street", "Glasgow", "sample@gmail.com", "07400123456", "password");
+        Customer customer10 = new Customer("Larry Page", "10 Renfrew Street", "Glasgow", "sample10@gmail.com", "07400123456", "password10");
         customerRepository.save(customer10);
 
 //        FREELANCERS:
 
-        Freelancer freelancer1 = new Freelancer("Eric Downie", "1 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer1 = new Freelancer("Eric Downie", "1 Hope Street", "Glasgow", "sample11@gmail.com", "07400123456", "finance", "password11");
         freelancerRepository.save(freelancer1);
 
-        Freelancer freelancer2 = new Freelancer("Girolamo Cardano", "2 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer2 = new Freelancer("Girolamo Cardano", "2 Hope Street", "Glasgow", "sample12@gmail.com", "07400123456", "finance", "password12");
         freelancerRepository.save(freelancer2);
 
-        Freelancer freelancer3 = new Freelancer("Leonhard Euler", "3 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer3 = new Freelancer("Leonhard Euler", "3 Hope Street", "Glasgow", "sample13@gmail.com", "07400123456", "finance", "password13");
         freelancerRepository.save(freelancer3);
 
-        Freelancer freelancer4 = new Freelancer("Carl Friedrich Gauss", "4 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer4 = new Freelancer("Carl Friedrich Gauss", "4 Hope Street", "Glasgow", "sample14@gmail.com", "07400123456", "finance", "password14");
         freelancerRepository.save(freelancer4);
 
-        Freelancer freelancer5 = new Freelancer("Georg Cantor", "5 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer5 = new Freelancer("Georg Cantor", "5 Hope Street", "Glasgow", "sample15@gmail.com", "07400123456", "finance", "password15");
         freelancerRepository.save(freelancer5);
 
-        Freelancer freelancer6 = new Freelancer("Paul Erdös", "6 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer6 = new Freelancer("Paul Erdös", "6 Hope Street", "Glasgow", "sample16@gmail.com", "07400123456", "finance", "password16");
         freelancerRepository.save(freelancer6);
 
-        Freelancer freelancer7 = new Freelancer("Isaac Newton", "7 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer7 = new Freelancer("Isaac Newton", "7 Hope Street", "Glasgow", "sample17@gmail.com", "07400123456", "finance", "password17");
         freelancerRepository.save(freelancer7);
 
-        Freelancer freelancer8 = new Freelancer("Wilhelm Leibniz", "8 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer8 = new Freelancer("Wilhelm Leibniz", "8 Hope Street", "Glasgow", "sample18@gmail.com", "07400123456", "finance", "password18");
         freelancerRepository.save(freelancer8);
 
-        Freelancer freelancer9 = new Freelancer("René Descartes", "9 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer9 = new Freelancer("René Descartes", "9 Hope Street", "Glasgow", "sample19@gmail.com", "07400123456", "finance", "password19");
         freelancerRepository.save(freelancer9);
 
-        Freelancer freelancer10 = new Freelancer("G. F. Bernhard Riemann", "10 Hope Street", "Glasgow", "sample@gmail.com", "07400123456", "finance", "password");
+        Freelancer freelancer10 = new Freelancer("G. F. Bernhard Riemann", "10 Hope Street", "Glasgow", "sample20@gmail.com", "07400123456", "finance", "password20");
         freelancerRepository.save(freelancer10);
 
 //        RATINGS:
