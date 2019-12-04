@@ -2,6 +2,9 @@ import React, {Component, Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import JobsList from '../../components/jobs/JobsList';
 import JobDetails from '../../components/jobs/JobDetails';
+import JobFormContainer from './JobFormContainer';
+
+import JobApplicationContainer from './JobApplicationContainer';
 
 class JobsContainer extends Component{
   constructor(props){
@@ -29,7 +32,22 @@ class JobsContainer extends Component{
           <Route exact path="/jobs/:id" render={(props) => {
             const id = props.match.params.id;
             const job = this.findJobById(id);
-            return <JobDetails job={job} />
+            const url = '/freelancers/' + id + '/application';
+            const job_url = '/jobs/' + id + '/applicants';
+            return <JobDetails job={job} new_application={url} post_url={job_url}/>
+          }} />
+
+          <Route exact path="/jobs/:id/applicants" render={(props) =>{
+            const id = props.match.params.id;
+            const job = this.findJobById(id);
+            const url = "/api/jobs/" + id + "/applicants";
+            const job_url = '/jobs/' + id;
+            return <JobApplicationContainer url={url} job={job} job_url={job_url} freelancers={this.props.freelancers}/>
+          }}/>
+          <Route exact path="/jobs/edit/:id" render={(props) => {
+            const id = props.match.params.id;
+            const job = this.findJobById(id);
+            return <JobFormContainer job={job} freelancers={this.props.freelancers}/>
           }} />
 
           </Switch>

@@ -3,9 +3,7 @@ import {Link} from 'react-router-dom';
 import Customer from './Customer';
 import CustomerJobList from './CustomerJobList';
 import Request from '../../helpers/request';
-import CustomerReviewList from './CustomerReviewList';
 import CustomerFormContainer from '../../containers/customers/CustomerFormContainer';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class CustomerDetail extends Component {
   constructor(props) {
@@ -15,34 +13,10 @@ class CustomerDetail extends Component {
       customerJobs: null,
       customerReviews: null
     }
+    this.averageRating = this.averageRating.bind(this);
+    this.numberOfElements = this.numberOfElements.bind(this);
     this.getEditUrl = this.getEditUrl.bind(this);
   }
-
-
-  // componentDidUpdate() {
-  //   if (!this.state.customerJobs) {
-  //     const request = new Request();
-  //     const jobs_url = '/api/jobs/customers/' + this.props.customer.id;
-  //
-  //     request.get(jobs_url).then((jobs) => {
-  //
-  //       this.setState({
-  //         customerJobs: jobs
-  //       })
-  //     })
-  //   }
-  //   if (!this.state.customerReviews) {
-  //     const request = new Request();
-  //     const reviews_url = '/api/reviews/customers/' + this.props.customer.id;
-  //
-  //     request.get(reviews_url).then((reviews) => {
-  //
-  //       this.setState({
-  //         customerJobs: reviews
-  //       })
-  //     })
-  //   }
-  // }
 
   componentDidUpdate(){
     const request = new Request();
@@ -60,6 +34,19 @@ class CustomerDetail extends Component {
     })
   }
 
+  numberOfElements() {
+    return this.state.customerReviews.length;
+  }
+
+  averageRating() {
+    let counter = 0;
+    const totalReview = this.numberOfElements();
+    for (let i=0; i<totalReview; i++) {
+      counter += this.state.customerReviews[i].rating;
+    }
+    const average = counter / totalReview;
+    return average;
+  }
   getEditUrl(){
     const editUrl = '/customers/edit/' + this.props.customer.id;
     return editUrl;
@@ -74,15 +61,15 @@ class CustomerDetail extends Component {
       <div>
       <p>Name: {this.props.customer.name}</p>
       <p>Address: {this.props.customer.address}</p>
+      <p>City: {this.props.customer.location}</p>
       <p>E-mail: {this.props.customer.email}</p>
       <p>Number: {this.props.customer.tellNo}</p>
-      <p>City: {this.props.customer.location}</p>
       <p>Available job opportunities:</p>
       <CustomerJobList jobs={this.state.customerJobs}/>
-      <p>Rating:</p>
-      <CustomerReviewList reviews={this.state.customerReviews}/>
+      <p>Rating: {this.averageRating().toFixed(2)} ({this.numberOfElements()} ratings)</p>
       <button><a href={this.props.newjob_url}>New Job</a></button>
       <button><a href="/customers">Go Back</a></button>
+      <button><a href={this.props.newrating_url}>Give me a rating</a></button>
       <Link to={this.getEditUrl}><button type="button">Edit {this.props.customer.name}</button></Link>
       </div>
     )

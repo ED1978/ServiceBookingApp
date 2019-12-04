@@ -1,10 +1,10 @@
 As a Customer I want to be able to....
 
-~ Register for a Customer account
+~ Register for a Customer account X
 
-~ Login to my account
+~ Login to my account X
 
-~ amend my account details
+~ amend my account details X
 
 ~ view instructions on how to use the app
 
@@ -18,7 +18,7 @@ As a Customer I want to be able to....
   ~ Ratings/Reviews
   ~ cost
 
-~ Post jobs
+~ Post jobs X
 
 ~ Communicate with SPs via app (Data security)
 
@@ -40,12 +40,12 @@ As a Customer I want to be able to....
 
 As A Service Provider I want to be able to....
 
-~ Register for an SP account
+~ Register for an SP account X
   ~ Create Profile page
 
-~ Login to my account
+~ Login to my account X
 
-~ amend my account details
+~ amend my account details X
 
 ~ view instructions on how to use the app
 

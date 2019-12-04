@@ -20,6 +20,7 @@ const CustomerEditForm = (props) => {
 
   return(
     <div>
+    <h4>Edit your details</h4>
       <form onSubmit={handleSubmit}>
       <input type="text" defaultValue={props.customer.name} name="name"/>
       <input type="text" defaultValue={props.customer.address} name="address"/>

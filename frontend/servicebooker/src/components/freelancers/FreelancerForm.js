@@ -26,7 +26,6 @@ const FreelancerForm = (props) => {
         <input type="text" placeholder="Email" name="email"/>
         <input type="text" placeholder="Telephone Number" name="tellNo"/>
         <input type="text" placeholder="Location" name="location"/>
-        <input type="text" placeholder="Category" name="category"/>
         <input type="text" placeholder="Password" name="password"/>
         <button type="submit">Register</button>
       </form>

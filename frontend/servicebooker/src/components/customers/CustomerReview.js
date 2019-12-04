@@ -5,9 +5,11 @@ const CustomerReview = (props) => {
     return 'Loading...'
   }
 
+  const url = '/reviews/' + props.review.id;
+
   return (
     <Fragment>
-      <p>{props.review.rating}</p>
+      <a href={url}>{props.review.rating}</a>
     </Fragment>
   )
 }
