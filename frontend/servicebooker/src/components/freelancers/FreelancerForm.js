@@ -10,7 +10,6 @@ const FreelancerForm = (props) => {
       email: event.target.email.value,
       tellNo: event.target.tellNo.value,
       location: event.target.location.value,
-      category: event.target.category.value,
       password: event.target.password.value,
       userType: "freelancer"
     }
