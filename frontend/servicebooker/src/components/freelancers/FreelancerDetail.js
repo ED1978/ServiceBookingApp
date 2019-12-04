@@ -15,17 +15,15 @@ const FreelancerDetail = (props) => {
 
   return(
     <div className="component">
-      <Freelancer freelancer={props.freelancer} />
+      <p>Name: {props.freelancer.name}</p>
       <p>Address: {props.freelancer.address}</p>
-      <p>Email:: {props.freelancer.email}</p>
-      <p>Tel:: {props.freelancer.tellNo}</p>
+      <p>Email: {props.freelancer.email}</p>
+      <p>Tel: {props.freelancer.tellNo}</p>
       <p>Location: {props.freelancer.location}</p>
       <p>Rating: {props.freelancer.rating}</p>
       <p>Category: {props.freelancer.category}</p>
       <button onClick={handleDelete}>Delete {props.freelancer.name}</button>
-      <div className="jobs-list">
-        <JobsList jobs={props.jobs} />
-      </div>
+      <button><a href='/freelancers'>Go Back</a></button>
     </div>
   )
 }

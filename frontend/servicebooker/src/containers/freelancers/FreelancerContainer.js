@@ -4,6 +4,7 @@ import FreelancerList from '../../components/freelancers/FreelancerList';
 import FreelancerDetail from '../../components/freelancers/FreelancerDetail';
 import Request from '../../helpers/request.js'
 import FreelancerFormContainer from './FreelancerFormContainer';
+import JobApplicationContainer from '../jobs/JobApplicationContainer';
 
 class FreelancerContainer extends Component{
   constructor(props){

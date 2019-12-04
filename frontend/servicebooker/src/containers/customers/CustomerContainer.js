@@ -6,6 +6,7 @@ import Request from '../../helpers/request';
 import CustomerJobList from '../../components/customers/CustomerJobList';
 import CustomerReviewList from '../../components/customers/CustomerReviewList';
 import CustomerFormContainer from './CustomerFormContainer';
+import CustomerReviewFormContainer from './CustomerReviewFormContainer';
 
 
 class CustomerContainer extends Component {
@@ -44,7 +45,8 @@ class CustomerContainer extends Component {
               const id = props.match.params.id;
               const customer = this.findCustomerById(id);
               const url = "/customers/" + id + "/newjob";
-              return <CustomerDetail customer={customer} newjob_url={url}/>
+              const rating_url = '/customers/' + id + '/rating'
+              return <CustomerDetail customer={customer} newjob_url={url} newrating_url={rating_url}/>
             }}/>
             <Route exact path="/customers/:id/jobs" render={(props) => {
               const id = props.match.params.id;
@@ -59,6 +61,12 @@ class CustomerContainer extends Component {
               const customer = this.findCustomerById(id);
               const url = "/customers/" + id;
               return <CustomerFormContainer customer={customer} url={url}/>
+            }}/>
+            <Route exact path="/customers/:id/rating" render={(props) =>{
+              const id = props.match.params.id;
+              const customer = this.findCustomerById(id);
+              const url = "/customers/" + id;
+              return <CustomerReviewFormContainer customer={customer} url={url}/>
             }}/>
             </Switch>
           </Fragment>
