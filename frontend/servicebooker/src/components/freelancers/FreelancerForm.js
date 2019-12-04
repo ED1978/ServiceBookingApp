@@ -19,6 +19,7 @@ const FreelancerForm = (props) => {
 
   return(
     <div>
+    <h4>Register Your Details</h4>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Name" name="name"/>
         <input type="text" placeholder="Address" name="address"/>
