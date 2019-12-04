@@ -29,7 +29,7 @@ public class Customer extends User {
     @Column(name = "user_type")
     private String userType;
 
-    public Customer(String name, String address, String email, String tellNo, String location, String password){
+    public Customer(String name, String address, String location, String email, String tellNo, String password){
         super(name, address, email, tellNo, location, password);
         this.jobs = new ArrayList<Job>();
         this.reviews = new ArrayList<Review>();

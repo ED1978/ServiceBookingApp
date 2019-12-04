@@ -13,12 +13,12 @@ const JobDetails = (props) => {
 
   return(
     <div>
-      <Job job={props.job} />
       <p>Title: {props.job.title}</p>
       <p>Location: {props.job.location}</p>
       <p>Description: {props.job.description}</p>
       <p>Hourly Rate: £{props.job.price}/hr</p>
       <p>Estimated Duration: {props.job.duration} Hours</p>
+      <button><a href='/jobs'>Go Back</a></button>
       <Link to={editUrl}><button type="button">Apply for Jobs</button></Link>
     </div>
   )
