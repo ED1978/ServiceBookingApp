@@ -13,11 +13,14 @@ const CustomerReviewForm = (props) => {
 
   return(
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="number" min="1" max="10" placeholder="1-10" step="0.1" name="rating"/>
-        <input type="date" placeholder="Date" name="date"/>
-        <button type="submit">Save</button>
-      </form>
+      <h1 className="page-title">Leave A Review</h1>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input type="number" min="1" max="10" placeholder="1-10" step="0.1" name="rating"/>
+          <input type="date" placeholder="Date" name="date"/>
+          <button type="submit">Save</button>
+        </form>
+      </div>
     </div>
   )
 }

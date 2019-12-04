@@ -2,7 +2,6 @@
   list-style-type: none;
   display: inline-block;
   margin-left: 20px;
-  font-family: Gill Sans;
   font-size: 20px;
   margin-top: 7px;
 }
@@ -11,6 +10,7 @@ header{
   height: 70px;
   box-shadow: 3px 2px #cfd6cc;
   background-color: #ebeeea;
+  font-family: Gill Sans;
 }
 
 a{

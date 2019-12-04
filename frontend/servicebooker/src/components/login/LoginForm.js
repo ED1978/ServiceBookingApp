@@ -13,11 +13,14 @@ const LoginForm = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleLogin}>
-        <input type="text" placeholder="Email" name="email"/>
-        <input type="text"  placeholder="Password" name="password"/>
-        <button type="submit">Login</button>
-      </form>
+      <h1 className="page-title">Login</h1>
+      <div>
+        <form className="form" onSubmit={handleLogin}>
+          <input type="text" placeholder="Email" name="email"/>
+          <input type="text"  placeholder="Password" name="password"/>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   )
 

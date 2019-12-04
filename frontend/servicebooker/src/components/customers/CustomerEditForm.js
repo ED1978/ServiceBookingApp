@@ -20,16 +20,18 @@ const CustomerEditForm = (props) => {
 
   return(
     <div>
-    <h4>Edit your details</h4>
-      <form onSubmit={handleSubmit}>
-      <input type="text" defaultValue={props.customer.name} name="name"/>
-      <input type="text" defaultValue={props.customer.address} name="address"/>
-      <input type="text" defaultValue={props.customer.email} name="email"/>
-      <input type="text" defaultValue={props.customer.tellNo} name="tellNo"/>
-      <input type="text" defaultValue={props.customer.location} name="location"/>
-      <input type="text" defaultValue="Password" name="password"/>
-      <button type="submit">Edit {props.customer.name}</button>
-      </form>
+      <h1 className="page-title">Edit your details</h1>
+      <div  className="form">
+        <form onSubmit={handleSubmit}>
+        <input type="text" defaultValue={props.customer.name} name="name"/>
+        <input type="text" defaultValue={props.customer.address} name="address"/>
+        <input type="text" defaultValue={props.customer.email} name="email"/>
+        <input type="text" defaultValue={props.customer.tellNo} name="tellNo"/>
+        <input type="text" defaultValue={props.customer.location} name="location"/>
+        <input type="text" defaultValue="Password" name="password"/>
+        <button type="submit">Edit {props.customer.name}</button>
+        </form>
+      </div>
     </div>
   )
 

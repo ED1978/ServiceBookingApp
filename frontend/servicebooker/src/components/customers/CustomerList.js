@@ -1,19 +1,23 @@
 import React from 'react';
 import Customer from './Customer';
+import '../../style.css';
 
 const CustomerList = (props) => {
   const customers = props.customers.map((customer, index) => {
     return (
-      <li className="user-object" key={index}>
+      <li key={index} className="user-object">
         <Customer customer={customer}/>
       </li>
     )
   })
 
   return (
-    <ul>
-      {customers}
-    </ul>
+    <div className="list-container">
+    <h1 className="page-title">Registered Customers</h1>
+      <ul>
+        {customers}
+      </ul>
+    </div>
   )
 }
 

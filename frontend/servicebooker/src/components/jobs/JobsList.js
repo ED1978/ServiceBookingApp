@@ -8,7 +8,7 @@ const JobsList = (props) => {
 
   const jobs = props.jobs.map((job, index) => {
     return(
-      <li key={index} className="component-item">
+      <li key={index} className="user-object">
       <Job job={job} />
       </li>
     )
@@ -16,7 +16,7 @@ const JobsList = (props) => {
 
   return(
     <div>
-      <h2>Live Jobs</h2>
+      <h1 className="page-title">Live Jobs</h1>
       <ul>
         {jobs}
       </ul>

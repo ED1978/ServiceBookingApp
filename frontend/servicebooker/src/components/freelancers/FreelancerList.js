@@ -1,5 +1,6 @@
 import React from 'react';
 import Freelancer from './Freelancer';
+import '../../style.css';
 
 const FreelancerList = (props) => {
   if (props.freelancers.length === 0){
@@ -8,15 +9,15 @@ const FreelancerList = (props) => {
 
   const freelancers = props.freelancers.map((freelancer, index) => {
     return(
-      <li key={index} className="component-item">
+      <li key={index} className="user-object">
         <Freelancer freelancer={freelancer} />
       </li>
     )
   })
 
   return(
-    <div>
-      <h2>Freelancers</h2>
+    <div className="list-container">
+      <h1 className="page-title">Available Freelancers</h1>
       <ul>
         {freelancers}
       </ul>

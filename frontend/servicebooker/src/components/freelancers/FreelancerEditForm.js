@@ -20,16 +20,18 @@ const FreelancerEditForm = (props) => {
 
   return(
     <div>
-    <h4>Edit Your Details</h4>
-      <form onSubmit={handleSubmit}>
-        <input type="text" defaultValue={props.freelancer.name} name="name"/>
-        <input type="text" defaultValue={props.freelancer.address} name="address"/>
-        <input type="text" defaultValue={props.freelancer.email} name="email"/>
-        <input type="text" defaultValue={props.freelancer.tellNo} name="tellNo"/>
-        <input type="text" defaultValue={props.freelancer.location} name="location"/>
-        <input type="text" defaultValue="Password" name="password"/>
-        <button type="submit">Edit {props.freelancer.name}</button>
-      </form>
+      <h1 className="page-title">Edit Your Account Details</h1>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input type="text" defaultValue={props.freelancer.name} name="name"/>
+          <input type="text" defaultValue={props.freelancer.address} name="address"/>
+          <input type="text" defaultValue={props.freelancer.email} name="email"/>
+          <input type="text" defaultValue={props.freelancer.tellNo} name="tellNo"/>
+          <input type="text" defaultValue={props.freelancer.location} name="location"/>
+          <input type="text" defaultValue="Password" name="password"/>
+          <button type="submit">Edit {props.freelancer.name}</button>
+        </form>
+      </div>
     </div>
   )
 
