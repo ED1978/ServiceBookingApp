@@ -44,9 +44,9 @@ class CustomerDetail extends Component {
     for (let i=0; i<totalReview; i++) {
       counter += this.state.customerReviews[i].rating;
     }
-  }
     const average = counter / totalReview;
     return average;
+  }
   getEditUrl(){
     const editUrl = '/customers/edit/' + this.props.customer.id;
     return editUrl;
